@@ -1,0 +1,22 @@
+.header{
+	background-color: #036db4;
+	font-size: 0.98rem;
+	font-weight: 600;
+	height: 100px;
+}
+.icon{
+	font-size: 55px;
+}
+  
+.logo2{
+	animation: stideOn 3s ease forwards;
+	opacity: 0;
+}
+  @keyframes stideOn {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }

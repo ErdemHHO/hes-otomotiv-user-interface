@@ -1,0 +1,40 @@
+.footerContainer {
+  text-align: center;
+  background-color: #111111;
+}
+
+.logoFooter {
+  width: 200px;
+}
+
+.textPrimary {
+  color: #ffffff;
+}
+
+.whatsapp {
+  color: green;
+}
+
+.instagram {
+  color: #f601c1;
+}
+
+.sahibinden {
+  color: #ffd700;
+}
+.facebook {
+  color: #4ab7ff;
+}
+
+.icon {
+  font-size: 2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.designedBy:hover {
+  color: #ffd700;
+}

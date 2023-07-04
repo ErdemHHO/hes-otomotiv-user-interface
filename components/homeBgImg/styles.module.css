@@ -1,0 +1,58 @@
+.main{
+	margin-top: 0 !important;
+}
+.hesLogo1{
+	transform: translateY(100px);
+	width: 200px;
+}
+.baslik{
+	transform: translateY(100px);
+}
+
+
+.bmwCar {
+	animation: slide-in 3s ease-out; /* 1 saniyede sağdan sola kaydır */
+  }
+  
+  @keyframes slide-in {
+	from {
+	  transform: translateX(100%); /* başlangıçta sağda olsun */
+	}
+	to {
+	  transform: translateX(0); /* bitişte ortada olsun */
+	}
+  }
+
+.bmwCar2{
+	animation: slide-in 3s ease-out;
+	width: 250px;
+}	
+@keyframes slide-in {
+	from {
+	transform: translateX(100%); /* başlangıçta sağda olsun */
+	}
+	to {
+	transform: translateX(0); /* bitişte ortada olsun */
+	}
+}
+
+.icon {
+	font-size: 2rem;
+	transition: transform 0.2s ease-in-out;
+  }
+  
+.icon:hover {
+transform: scale(1.2);
+}
+
+
+.home {
+	width: 100%;
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	background-image: url('/images/logos/bmwback.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center left;
+}

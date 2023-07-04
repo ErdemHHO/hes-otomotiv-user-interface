@@ -1,0 +1,15 @@
+
+.brandSlider {
+	position: relative;
+	width: 100%;
+	height: 120px;
+	border: 2px;
+	border-color: #111111;
+  }
+  
+ .sliderImage {
+	width: 100%;
+	height: 100%;
+	display: block;
+  }
+  

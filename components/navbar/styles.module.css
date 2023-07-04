@@ -1,0 +1,54 @@
+@media (max-width: 762px) {
+	.baslik2{
+		display: none;
+	}
+}
+.baslik1{
+	font-size: x-large;
+	color: #02548C;
+}
+.baslik2{
+	font-size:20px;
+	color: #D90329;
+}
+
+.icon {
+	font-size: 2rem;
+	transition: transform 0.2s ease-in-out;
+  }
+  
+.icon:hover {
+transform: scale(1.2);
+}
+
+.navLink{
+	color: #02548C;
+	border-bottom: 0.2rem solid var(--main-color);
+}
+.navLink:hover{
+	color: #D90329;
+	border-bottom: 0.2rem solid #D90329;
+}
+.whatsapp{
+	color: green !important;
+}
+.whatsapp:hover{
+	border-bottom: 0.2rem solid green !important;
+}
+.logo{
+	animation: slideIn 3s ease forwards;
+	opacity: 0;
+	transform: translateX(-100%);
+	height: 61px;
+}
+  @keyframes slideIn {
+	0% {
+	  opacity: 0;
+	  transform: translateX(-100%);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateX(0%);
+	}
+  }
+  

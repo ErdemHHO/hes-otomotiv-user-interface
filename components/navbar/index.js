@@ -48,8 +48,8 @@ function HNavbar() {
 
   return (
     <div>
-      <Navbar style={myStyles} expand="xl" className='p-3 text-center justify-content-center' id='navbar'>
-        <Container className='nav'>
+      <Navbar style={myStyles} expand="xl" className='px-5 pt-3 text-center justify-content-center' id='navbar'>
+        <Container fluid className='nav'>
           <Navbar.Brand>
             <Image src="/images/logos/HES-OTOMOTIV-LOGO.png" alt="Logo" className={styles.logo} width={90} height={60} />
             <span className={styles.baslik1}><strong >HES OTOMOTİV </strong> </span> {' '}
@@ -62,7 +62,6 @@ function HNavbar() {
               <Nav.Link href="#link" className={`${styles.navLink} nav-link`}>Hakkımızda</Nav.Link>
               <Nav.Link href="#link" className={`${styles.navLink} nav-link`}>İletişim</Nav.Link>
               <Nav.Link href="#link" className={`${styles.navLink} nav-link`}>Ürünlerimiz</Nav.Link>
-              <Nav.Link href="#link" className={`${styles.navLink} . ${styles.whatsapp} nav-link`}>Whatsapp <FaWhatsapp size={24} className='icon' /> </Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control

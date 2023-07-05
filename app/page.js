@@ -26,12 +26,25 @@ export default function Home() {
           </Row>
         </Container>
       </div>
-      <div className="parts__container">
-          <ProductCard />
-      </div>
 
       <HomeSearchBar />
 
+      <h1 className="text-center m-2">
+          <strong>YENİ ÜRÜNLER</strong>
+      </h1>
+      <div className="product_card_container">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
+      <div className="text-end text-denger mt-1 mx-5 p-3" >
+        <a href="#" className="text-danger">Tüm Ürünleri Gör</a>
+      </div>
       <BrandSlider />
     </main>
   )

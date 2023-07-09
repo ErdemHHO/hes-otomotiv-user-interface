@@ -29,7 +29,7 @@ function Footer() {
               </Col>
             </Row>
           </Col>
-          <Col md={2}>
+          <Col md={3}>
             <h4>Kurumsal</h4>
             <ul>
               <li>
@@ -43,7 +43,7 @@ function Footer() {
               </li>
             </ul>
           </Col>
-          <Col md={2}>
+          <Col md={3}>
             <h4>TESLİMAT & İADE</h4>
             <ul>
               <li>
@@ -54,14 +54,6 @@ function Footer() {
               </li>
               <li>
                 Mesafeli Satış Sözleşmesi
-              </li>
-            </ul>
-          </Col>
-          <Col md={2}>
-            <h4>Admin</h4>
-            <ul>
-              <li>
-                Admin Girişi
               </li>
             </ul>
           </Col>

@@ -35,6 +35,9 @@
   transform: scale(1.2);
 }
 
+.designedBy {
+  color: #fff;
+}
 .designedBy:hover {
   color: #ffd700;
 }

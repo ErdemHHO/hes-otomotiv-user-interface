@@ -24,6 +24,16 @@ ul li {
   text-decoration: none;
 }
 
+a{
+  text-decoration: none;
+}
+.link{
+  color:#fff !important;
+}
+
+.navigation-link:hover{
+  text-decoration: underline #000 !important;
+}
 
 .baslik-h1{
   text-align: center;
@@ -38,7 +48,7 @@ ul li {
   background-color: #fff !important;
   color: #000 !important;
   padding: 12px;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid rgba(128, 127, 127, 0.166);
 }
 
 .menuButton:hover{
@@ -144,7 +154,9 @@ ul li {
   border-radius: 4px;
   padding: 5px;
   color: #fff;
+  margin-right: 10px;
 }
+
 
 
 .product_card__button_detail:hover {
@@ -193,3 +205,4 @@ ul li {
 	display: inline-block;
 	margin-right: 5px;
 }
+

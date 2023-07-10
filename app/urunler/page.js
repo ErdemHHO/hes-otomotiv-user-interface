@@ -2,6 +2,7 @@
 import React from 'react'
 import SideMenu from "@/components/sideMenu";
 import ProductCard from "@/components/productCard";
+import NavigationBar from "@/components/navigationBar";
 
 async function getData() {
 
@@ -29,10 +30,11 @@ async function page() {
   const seriData = await getSeriData()
 
   return (
-    <div>
+    <div className='icerik' >
       <div className='mt-5'>
         <div className='container-fluid' >
-          <div className='row'>
+          <div className='row'>              
+            <NavigationBar/>
             <div className="col-xl-3 text-center d-flex justify-content-center">
               <SideMenu data={seriData} />
             </div>

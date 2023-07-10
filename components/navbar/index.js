@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { FaWhatsapp } from 'react-icons/fa';
 
 import styles from "./styles.module.css";
+import Link from 'next/link';
 
 function HNavbar() {
   const myComponentStyles = {
@@ -22,7 +23,7 @@ function HNavbar() {
     zIndex: "10",
     backgroundColor: "#fff",
     boxShadow: "0 4px 4px -2px rgba(0,0,0,0.2), 0 2px 8px 0 rgba(0,0,0,0.14), 0 6px 10px 0 rgba(0,0,0,0.12)",
-    marginTop: "75px",
+    marginTop: "65px",
     transition: "margin-top 0.4s ease-in-out"
   };
   const [myStyles, setMyStyles] = useState(myComponentStyles);
@@ -32,7 +33,7 @@ function HNavbar() {
       function handleScroll() {
         const newStyles = {
           ...myComponentStyles,
-          marginTop: window.scrollY > 30 ? '0px' : '75px',
+          marginTop: window.scrollY > 30 ? '0px' : '65px',
         };
         setMyStyles(newStyles);
       }
@@ -50,18 +51,29 @@ function HNavbar() {
     <div>
       <Navbar style={myStyles} expand="xl" className='px-5 pt-3 text-center justify-content-center' id='navbar'>
         <Container fluid className='nav'>
-          <Navbar.Brand>
-            <Image src="/images/logos/HES-OTOMOTIV-LOGO.png" alt="Logo" className={styles.logo} width={90} height={60} />
-            <span className={styles.baslik1}><strong >HES OTOMOTİV </strong> </span> {' '}
-            <span className={styles.baslik2}><strong >BMW MINI YEDEK PARÇALARI</strong></span>
-          </Navbar.Brand>
+          <Link href="/" >
+            <Navbar.Brand>
+              <Image src="/images/logos/HES-OTOMOTIV-LOGO.png" alt="Logo" className={styles.logo} width={90} height={60} />
+              <span className={styles.baslik1}><strong >HES OTOMOTİV </strong> </span> {' '}
+              <span className={styles.baslik2}><strong >BMW MINI YEDEK PARÇALARI</strong></span>
+            </Navbar.Brand>
+          </Link>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home" className={`${styles.navLink} nav-link`}>Anasayfa</Nav.Link>
-              <Nav.Link href="#link" className={`${styles.navLink} nav-link`}>Hakkımızda</Nav.Link>
-              <Nav.Link href="#link" className={`${styles.navLink} nav-link`}>İletişim</Nav.Link>
-              <Nav.Link href="#link" className={`${styles.navLink} nav-link`}>Ürünlerimiz</Nav.Link>
+              <Link href="/" >
+                <span className={`${styles.navLink} nav-link`}>Anasayfa</span>
+              </Link>
+              <Link href="/hakkimizda">
+                <span className={`${styles.navLink} nav-link`}>Hakkımızda</span>
+              </Link>
+              <Link href="/iletisim">
+                <span className={`${styles.navLink} nav-link`}>İletişim</span>
+              </Link>
+              <Link href="/urunler">
+                <span className={`${styles.navLink} nav-link`}>Ürünlerimiz</span>
+              </Link>              
             </Nav>
             <Form className="d-flex">
               <Form.Control

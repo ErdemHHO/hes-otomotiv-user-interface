@@ -2,12 +2,22 @@
 	background-color: #036db4;
 	font-size: 0.98rem;
 	font-weight: 600;
-	height: 100px;
+	height: 65px;
 }
 .icon{
 	font-size: 55px;
+	color: #fff;
+}
+
+.icon2{
+	font-size: 44px;
+	color: #fff;
 }
   
+.icon2:hover{
+	color: #21A13A;
+}
+
 .logo2{
 	animation: stideOn 3s ease forwards;
 	opacity: 0;

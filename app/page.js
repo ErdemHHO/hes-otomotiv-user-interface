@@ -5,6 +5,8 @@ import HomeBgImg from "@/components/homeBgImg";
 import HomeSearchBar from "@/components/HomeSearchBar";
 import ProductCard from "@/components/productCard";
 
+import Link from 'next/link'
+
 
 
 async function getData() {
@@ -37,13 +39,13 @@ export default async function Home() {
   return (
     <main>
 
-      <div>
+      <div className="mt-5" >
         <div className="container" >
           <div className="row">
-            <div className='col mt-5'>
+            <div className='col-xl-3 text-center d-flex justify-content-center'>
               <SideMenu data={seriData} />
             </div>
-            <div className='col'>
+            <div className='col-xl-9 '>
               <HomeBgImg />
             </div>
           </div>
@@ -56,12 +58,14 @@ export default async function Home() {
           <strong>YENİ ÜRÜNLER</strong>
       </h1>
       <div className="product_card_container">
-        {data.products.map(product => (
+        {data.products.slice(0, 20).map((product) => (
           <ProductCard key={product._id} data={product} />
         ))}
       </div>
       <div className="text-end text-denger mt-1 mx-5 p-3" >
-        <a href="#" className="text-danger">Tüm Ürünleri Gör</a>
+        <Link href="/urunler">
+        <span  className="text-danger border-bottom">Tüm Ürünleri Gör</span>
+        </Link>
       </div>
       <BrandSlider />
     </main>

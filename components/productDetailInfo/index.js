@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
+import Link from 'next/link';
 
 const ProductDetailInfo = ({ data }) => {
 
@@ -49,11 +50,13 @@ const ProductDetailInfo = ({ data }) => {
         </span>
       </div>
 
-      <div className='product_detail_info_button'>
-        <button className='product_detail_info_button_whatsapp w-100 m-1'>
-          <FaWhatsapp size={64} /> Whatsapp İle İletişim
-        </button>
-      </div>
+      <Link href={`https://api.whatsapp.com/send/?phone=%2B9053224090586&text=Merhaba%21++${product.stockCode}+stok+kodlu+%C3%BCr%C3%BCn%C3%BCn%C3%BCz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0`} target="_blank">
+        <div className='product_detail_info_button'>
+          <button className='product_detail_info_button_whatsapp w-100 m-1'>
+            <FaWhatsapp size={64} /> Whatsapp İle İletişim
+          </button>
+        </div>
+      </Link>
 
       <div className='product_detail_info_description mt-3 p-3 bg-light'>
         <h5 className='text-center border-bottom m-2'>

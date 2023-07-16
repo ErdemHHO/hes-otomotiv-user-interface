@@ -29,9 +29,9 @@ function ProductCard({ data }) {
           <img src={product.image} alt={product.title}/>
         </div>
         <h6 className="text-center mt-3">
-        <strong> 
-          {product.name.startsWith('BMW') ? product.name.substring(3, 33) + '...' : product.name.substring(0, 30)}
-        </strong> 
+        <strong>
+          {product.name.length > 30 ? product.name.substring(0, 30) + '...' : product.name}
+        </strong>
         </h6>
         <div className="product_card__info p-3">
           <ul>

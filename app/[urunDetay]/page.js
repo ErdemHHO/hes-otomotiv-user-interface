@@ -20,7 +20,7 @@ async function Page({ params: {urunDetay} }) {
       <div className='container'>
         <div className='row'>
           <div className='col-xl-6' >
-            <ProductDetailImages data={data.product.image_urls} />
+            <ProductDetailImages data={data?.product?.image_urls} />
           </div>
           <div className='col-xl-6' >
             <ProductDetailInfo data={data.product} />

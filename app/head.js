@@ -1,7 +1,7 @@
 export default function Head() {
     return (
       <>
-        <title>Erdem</title>
+        <title>Hes Otomotiv | Bmw Mini Otomotiv Yedek Parcalari</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta
           name="description"

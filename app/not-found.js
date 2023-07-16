@@ -8,7 +8,7 @@ function NotFound() {
             <Image src="/images/logos/HES-OTOMOTIV-LOGO.png" alt="Logo" width={170} height={120} />
         </div>
         <div className='d-flex justify-content-center text-center' >
-            <h2 className='fw-1' >SAYFA BULUNAMADI</h2>
+            <h2 className='fw-1'>SAYFA BULUNAMADI</h2>
         </div>
     </div>
   )

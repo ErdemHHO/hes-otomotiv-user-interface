@@ -58,7 +58,7 @@ async function page({ params: {seri} }) {
               </div>
               <div className='col-xl-9'>
                 <div className="product_card_container">
-                  {data.products.map(product => (
+                  {data?.products?.map(product => (
                     <ProductCard key={product._id} data={product} />
                   ))}
                 </div>

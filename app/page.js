@@ -57,7 +57,7 @@ export default async function Home() {
           <strong>YENİ ÜRÜNLER</strong>
       </h1>
       <div className="product_card_container">
-        {data.products.slice(0, 20).map((product) => (
+        {data?.products?.slice(0, 20).map((product) => (
           <ProductCard key={product._id} data={product} />
         ))}
       </div>

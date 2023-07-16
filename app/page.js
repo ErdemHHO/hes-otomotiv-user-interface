@@ -22,7 +22,6 @@ async function getSeriData() {
 
   const res = await fetch('http://localhost:4000/api/user/series')
    
-  console.log(res)
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }

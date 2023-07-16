@@ -5,6 +5,8 @@ import { FaPhoneAlt } from 'react-icons/fa';
 
 import styles from "./styles.module.css";
 
+import Link from 'next/link'
+
 function HomeBgImg() {
   return (
     <div className={styles.main}>
@@ -16,8 +18,10 @@ function HomeBgImg() {
             <div className={`${styles.baslik} col-xl-6`} >
               <h5 className='text-decoration-underline'><strong>BMW MINI COOPER YEDEK PARÇALARI</strong></h5>
               <h5 className='text-primary'>
-                <FaPhoneAlt className={styles.icon}/>
-                +90 0532 240 90 58
+                <Link href={`tel:+905322409058`} target="_blank" >
+                  <FaPhoneAlt className={styles.icon}/>
+                  +90 0532 240 90 58
+                </Link>
               </h5>
             </div>
           </div>

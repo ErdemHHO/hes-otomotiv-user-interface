@@ -69,11 +69,6 @@ function Footer() {
                   İade & Değişim
                 </Link>
               </li>
-              <li>
-                <Link href="/teslimat" className='link' >
-                  Mesafeli Satış Sözleşmesi
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

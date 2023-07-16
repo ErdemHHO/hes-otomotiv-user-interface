@@ -11,7 +11,7 @@ function ProductCard({ data }) {
     title: data.title,
     stockCode: data.stockCode,
     oemNumber: data.oemNumber,
-    brand_id: data.brand_id,
+    brand_id: data.brand_id.name,
     status: data.status,
     oldPrice: data.oldPrice,
     sellingPrice: data.sellingPrice,
@@ -28,11 +28,11 @@ function ProductCard({ data }) {
         <div className="product_card__img p-2">
           <img src={product.image} alt={product.title}/>
         </div>
-        <h5 className="text-center mt-3">
-          <strong> 
-            {product.name}
-          </strong>
-        </h5>
+        <h6 className="text-center mt-3">
+        <strong> 
+          {product.name.startsWith('BMW') ? product.name.substring(3, 33) + '...' : product.name.substring(0, 30)}
+        </strong> 
+        </h6>
         <div className="product_card__info p-3">
           <ul>
             <li>

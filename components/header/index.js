@@ -25,29 +25,31 @@ function Header() {
                         <div className='m-2' >
                             <span className={styles.text}>
                                 <strong>
-                                    <Link href="tel:+905322409058" className='link' >+ 90 532 240 90 58</Link>
+                                    <Link href="tel:+905322409058" className='link' target="_blank" >+ 90 532 240 90 58</Link>
                                 </strong>
                                 </span>
                                 <br />
                                 <span className={`${styles.text} ${styles.textTel}`}>
                                 <strong>
-                                    <Link href="tel:+902166301616" className='link'>0 (216) 630 16 16</Link>
+                                    <Link href="tel:+902166301616" className='link' target="_blank">0 (216) 630 16 16</Link>
                                 </strong>
                             </span>
                         </div>  
                     </div>
                     <div className='d-flex justify-content-between mx-3'>
-                        <div className="d-flex">
-                            <div>
-                                <FaMapMarkedAlt className={styles.icon} />
+                        <Link href="https://goo.gl/maps/7noGMW1iSryeCF9u6" className='link' target="_blank">
+                            <div className="d-flex">
+                                <div>
+                                    <FaMapMarkedAlt className={styles.icon} />
+                                </div>
+                                <div className='m-2'>
+                                    <span className={styles.text}> Gümrükçüler Sanayi Sitesi <br /> A Blok No:26 Ümraniye / İstanbul</span>
+                                </div>
                             </div>
-                            <div className='m-2'>
-                                <span className={styles.text}> Gümrükçüler Sanayi Sitesi <br /> A Blok No:26 Ümraniye / İstanbul</span>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className='d-flex justify-content-between mx-3'>
-                        <Link href="mailto:hesotomotiv34@gmail.com?subject=%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." className='link' >
+                        <Link href="mailto:hesotomotiv34@gmail.com?subject=%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." className='link' target="_blank">
                             <div className="d-flex">
                                 <div>
                                     <FaMailBulk className={styles.icon} /> 

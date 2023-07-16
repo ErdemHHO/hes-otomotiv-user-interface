@@ -1,16 +1,50 @@
 'use client'
 
-import { Form, Button, FormControl, InputGroup } from 'react-bootstrap';
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
-function HomeSearchBar() {
+
+function SearchForm() {
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+
+    if (typeof query !== "string") {
+      return;
+    }
+
+    router.push(`/arama?q=${query}`);
+
+  };
+
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+  };
+
   return (
-    <Form className='m-5'>
-      <InputGroup className="mb-3">
-        <FormControl placeholder="Parça Adı veya Oem No Giriniz" aria-label="Arama yapın" aria-describedby="basic-addon2" />
-        <Button variant="outline-primary" id="button-addon2">Ara</Button>
-      </InputGroup>
-    </Form>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div className="input-group mb-3 p-3">
+          <input
+            type="search"
+            className="form-control"
+            placeholder="Oem No Veya Ürün Adı Giriniz"
+            aria-label="Ara..."
+            aria-describedby="button-addon2"
+            value={query}
+            onChange={handleChange}
+          />
+          <button className="searchButton" type="submit" id="button-addon2">
+            Ara
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
 
-export default HomeSearchBar;
+export default SearchForm;

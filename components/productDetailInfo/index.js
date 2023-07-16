@@ -8,7 +8,7 @@ const ProductDetailInfo = ({ data }) => {
     title: data.title,
     stockCode: data.stockCode,
     oemNumber: data.oemNumber,
-    brand_id: data.brand_id,
+    brand_id: data.brand_id.name,
     status: data.status,
     oldPrice: data.oldPrice,
     sellingPrice: data.sellingPrice,

@@ -12,6 +12,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 import styles from "./styles.module.css";
 import Link from 'next/link';
+import NavbarSearchInput from '../navbarSearchInput';
 
 function HNavbar() {
   const myComponentStyles = {
@@ -54,7 +55,7 @@ function HNavbar() {
           <Link href="/" >
             <Navbar.Brand>
               <Image src="/images/logos/HES-OTOMOTIV-LOGO.png" alt="Logo" className={styles.logo} width={90} height={60} />
-              <span className={styles.baslik1}><strong >HES OTOMOTİV </strong> </span> {' '}
+              <span className={styles.baslik1}><strong >HES OTOMOTİV</strong> </span> {' '}
               <span className={styles.baslik2}><strong >BMW MINI YEDEK PARÇALARI</strong></span>
             </Navbar.Brand>
           </Link>
@@ -75,15 +76,7 @@ function HNavbar() {
                 <span className={`${styles.navLink} nav-link`}>Ürünlerimiz</span>
               </Link>              
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Ürün Arayın"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-primary">Ara</Button>
-            </Form>
+            <NavbarSearchInput />
           </Navbar.Collapse>
         </Container>
       </Navbar>

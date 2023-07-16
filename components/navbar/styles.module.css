@@ -3,6 +3,11 @@
 		display: none;
 	}
 }
+@media (max-width: 568px) {
+	.baslik1{
+		display: none;
+	}
+}
 .baslik1{
 	font-size: x-large;
 	color: #02548C;

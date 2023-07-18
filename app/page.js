@@ -10,17 +10,23 @@ import Link from 'next/link'
 
 
 async function getData() {
-  const res = await fetch('http://3.75.212.3:3000/api/user/products')
+  const res = await fetch('http://3.75.212.3:3000/api/user/products', {
+    cache: 'no-store'
+  });
+
   if (!res.ok) {
-    throw new Error('Failed to fetch data')
+    throw new Error('Failed to fetch data');
   }
-  return res.json()
+
+  return res.json();
 }
 
 
 async function getSeriData() {
 
-  const res = await fetch('http://3.75.212.3:3000/api/user/series')
+  const res = await fetch('http://3.75.212.3:3000/api/user/series',{
+    cache: 'no-store'
+  })
    
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -41,7 +47,7 @@ export default async function Home() {
       <div className="mt-5" >
         <div className="container" >
           <div className="row">
-            <div className='col-xl-3 text-center d-flex justify-content-center'>
+            <div className='col-xl-3 text-center d-none d-md-flex justify-content-center'>
               <SideMenu data={seriData} />
             </div>
             <div className='col-xl-9 '>
@@ -51,7 +57,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <HomeSearchBar />
+      <HomeSearchBar/>
 
       <h1 className="text-center m-2">
           <strong>YENİ ÜRÜNLER</strong>

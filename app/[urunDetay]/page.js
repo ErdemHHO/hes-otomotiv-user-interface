@@ -1,12 +1,14 @@
 
 import React from 'react';
 import ProductDetailImages from '@/components/productDetailImages';
-import ProductDetailInfo from '@/components/ProductDetailInfo';
+import ProductDetailInfo from '@/components/productDetailInfo';
 
 async function getProduct(urunDetay) {
 
   const productSlug = urunDetay;
-  const res = await fetch(`http://3.75.212.3:3000/api/user/product/${productSlug}`);
+  const res = await fetch(`http://3.75.212.3:3000/api/user/product/${productSlug}`, {
+    cache: 'no-store'
+  });
   return res.json();
   
 }

@@ -60,9 +60,6 @@ export default class AutoPlay extends Component {
             <div  className={`${styles.brandSlider} m-1`} >
             <img src="/images/brands/hes-otomotiv-wender.png" alt="Logo" className={styles.sliderImage}/>
             </div>
-            <div  className={`${styles.brandSlider} m-1`} >
-            <img src="/images/brands/hes-otomotiv-ina.png" alt="Logo" className={styles.sliderImage}/>
-            </div>
             <div className={`${styles.brandSlider} m-1`} >
             <img src="/images/brands/hes-otomotiv-luk.png" alt="Logo" className={styles.sliderImage}/>
             </div>
@@ -72,8 +69,8 @@ export default class AutoPlay extends Component {
             <div className={`${styles.brandSlider} m-1`}>
             <img src="/images/brands/hes-otomotiv-hella.png" alt="Logo" className={styles.sliderImage}/>
             </div>
-            <div className={`${styles.brandSlider} m-1`}>
-            <img src="/images/brands/hes-otomotiv-bosch.png" alt="Logo" className={styles.sliderImage} />
+            <div  className={`${styles.brandSlider} m-1`} >
+            <img src="/images/brands/hes-otomotiv-ina.png" alt="Logo" className={styles.sliderImage}/>
             </div>
             <div className={`${styles.brandSlider} m-1`} >
             <img src="/images/brands/hes-otomotiv-textar.png" alt="Logo" className={styles.sliderImage} />

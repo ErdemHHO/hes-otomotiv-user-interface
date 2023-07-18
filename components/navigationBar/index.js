@@ -4,7 +4,6 @@ import { BsArrowRight } from 'react-icons/bs';
 import Link from 'next/link';
 
 function NavigationBar({ seri, araba, kategori }) {
-  console.log(seri?.seri.name, araba?.car.name, kategori?.category.name);
 
   return (
     <div className='container-fluid d-none d-md-flex bg-light text-center justify-content-center '>

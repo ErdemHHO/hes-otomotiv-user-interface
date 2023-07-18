@@ -64,11 +64,11 @@ function Header() {
 
                 
         </div>
-        <div className="container d-flex d-xl-none justify-content-between">
-            <div>
+        <div className="container d-flex d-xl-none justify-content-between ">
+            <div className='mt-2' >
                 <div className="d-flex">
-                    <img src="/images/brands/bmw.png" alt="HES-OTOMOTIV" className={styles.logo2} height={50} width={50} />
-                    <img src="/images/brands/mini.png" alt="HES-OTOMOTIV" className={styles.logo2} height={50} width={95} />
+                    <img src="/images/brands/bmw.png" alt="HES-OTOMOTIV" className={styles.logo2} height={40} width={40} />
+                    <img src="/images/brands/mini.png" alt="HES-OTOMOTIV" className={styles.logo2} height={40} width={75} />
                 </div>
             </div>
             <div className="d-flex mt-2">

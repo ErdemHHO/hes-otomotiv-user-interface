@@ -9,6 +9,7 @@
 
 html,body{
   font-family: 'Cabin', sans-serif;
+  color: #000;
 }
 
 .icerik{
@@ -38,6 +39,9 @@ a{
 .baslik-h1{
   text-align: center;
   font-weight: bold;
+  font-size:26px;
+  margin-bottom: 15px;
+  color: #056DB4;
 }
 .h1-baslik{
   text-align: center;
@@ -390,4 +394,31 @@ a{
 .error{
   margin-top: 200px;
   margin-bottom: 200px;
+}
+
+@media screen and (max-width: 960px) {
+  .sideMenu1 {
+    display: none; 
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .sideMenu2 {
+    display: none; 
+  }
+  .sideMenu .dropdown {
+    display: none; 
+  }
+}
+
+.sideMenu .dropdown {
+  margin-top: 0px !important;
+  padding: 10px !important;
+  width: 400px !important;
+  display: grid;
+}
+.sideMenu .dropdown li{
+  text-align: center;
+  justify-content: center;
+  width: 380px;
 }

@@ -6,7 +6,9 @@ import NavigationBar from "@/components/navigationBar";
 
 async function getData() {
 
-  const res = await fetch('http://3.75.212.3:3000/api/user/products')
+  const res = await fetch('http://3.75.212.3:3000/api/user/products',{
+    cache: 'no-store'
+  })
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
@@ -15,7 +17,9 @@ async function getData() {
 
 async function getSeriData() {
 
-  const res = await fetch('http://3.75.212.3:3000/api/user/series')
+  const res = await fetch('http://3.75.212.3:3000/api/user/series',{
+    cache: 'no-store'
+  })
   
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -34,10 +38,10 @@ async function page() {
         <div className='container-fluid' >
           <div className='row'>              
             <NavigationBar/>
-            <div className="col-xl-3 text-center d-flex justify-content-center">
+            <div className="col-md-3 text-center d-flex justify-content-center">
               <SideMenu data={seriData} />
             </div>
-            <div className='col-xl-9'>
+            <div className='col-md-9'>
               <div className="product_card_container">
                 {data?.products?.map(product => (
                   <ProductCard key={product._id} data={product} />

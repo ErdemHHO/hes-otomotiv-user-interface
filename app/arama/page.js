@@ -6,10 +6,15 @@ import SideMenu from "@/components/sideMenu";
 import ProductCard from "@/components/productCard";
 
 async function getSearchRequest(query) {
-  const res = await fetch(`http://3.75.212.3:3000/api/user/product/search/search?q=${query}`, {
+  const res = await fetch(`http://3.75.212.3:3000/api/user/product/search/search?q=${query}`, 
+  {
+    cache: 'no-store'
+  },
+  {
     headers: {
       'Content-Type': 'application/json',
     },
+
   });
   const data = await res.json();
 
@@ -18,7 +23,9 @@ async function getSearchRequest(query) {
 
 async function getSeriData() {
 
-  const res = await fetch('http://3.75.212.3:3000/api/user/series')
+  const res = await fetch('http://3.75.212.3:3000/api/user/series',{
+    cache: 'no-store'
+  })
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -33,9 +40,6 @@ async function Page() {
 
   const seriData = await getSeriData()
   const data = await getSearchRequest(encodedSearchQuery);
-
-
-  console.log(data)
 
   return (
     <div className='icerik'>

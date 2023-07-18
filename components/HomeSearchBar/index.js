@@ -28,7 +28,7 @@ function SearchForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="input-group mb-3 p-3">
+        <div className="input-group mb-3 p-3 mt-5">
           <input
             type="search"
             className="form-control"

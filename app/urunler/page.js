@@ -6,7 +6,7 @@ import NavigationBar from "@/components/navigationBar";
 
 async function getData() {
 
-  const res = await fetch('http://localhost:4000/api/user/products')
+  const res = await fetch('http://3.75.212.3:3000/api/user/products')
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
@@ -15,7 +15,7 @@ async function getData() {
 
 async function getSeriData() {
 
-  const res = await fetch('http://localhost:4000/api/user/series')
+  const res = await fetch('http://3.75.212.3:3000/api/user/series')
   
   if (!res.ok) {
     throw new Error('Failed to fetch data')

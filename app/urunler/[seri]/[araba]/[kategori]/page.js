@@ -12,14 +12,14 @@ async function getData(araba,kategori) {
   const carSlug = araba;
   const categorySlug=kategori;
   
-  const res = await fetch(`http://localhost:4000/api/user/products/car/${carSlug}/category/${categorySlug}`)
+  const res = await fetch(`http://3.75.212.3:3000/api/user/products/car/${carSlug}/category/${categorySlug}`)
 
   return res.json();
 }
 
 async function getCategoryData() {
 
-  const res = await fetch('http://localhost:4000/api/user/categories')
+  const res = await fetch('http://3.75.212.3:3000/api/user/categories')
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -32,7 +32,7 @@ async function getCarData(araba) {
 
   const slug = araba;
 
-  const res = await fetch(`http://localhost:4000/api/user/cars/${slug}`)
+  const res = await fetch(`http://3.75.212.3:3000/api/user/cars/${slug}`)
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -44,7 +44,7 @@ async function getSeriData(seri) {
   
   const slug = seri;
 
-  const res = await fetch(`http://localhost:4000/api/user/series/${slug}`)
+  const res = await fetch(`http://3.75.212.3:3000/api/user/series/${slug}`)
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -56,7 +56,7 @@ async function getKategoriData(kategori) {
 
   const slug = kategori;
 
-  const res = await fetch(`http://localhost:4000/api/user/categories/${slug}`)
+  const res = await fetch(`http://3.75.212.3:3000/api/user/categories/${slug}`)
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')

@@ -6,7 +6,7 @@ import ProductDetailInfo from '@/components/ProductDetailInfo';
 async function getProduct(urunDetay) {
 
   const productSlug = urunDetay;
-  const res = await fetch(`http://localhost:4000/api/user/product/${productSlug}`);
+  const res = await fetch(`http://3.75.212.3:3000/api/user/product/${productSlug}`);
   return res.json();
   
 }

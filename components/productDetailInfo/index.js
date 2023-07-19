@@ -13,6 +13,7 @@ const ProductDetailInfo = ({ data }) => {
     oldPrice: data.oldPrice,
     sellingPrice: data.sellingPrice,
     category_id: data.category_id,
+    salesFormat: data.salesFormat,
     series_id: data.series_id,
     car_id: data.car_id,
     slug: data.slug,
@@ -39,7 +40,7 @@ const ProductDetailInfo = ({ data }) => {
           <strong className="text-danger">DURUM:</strong> {product.status ? 'Sıfır' : 'İkinci El'}
         </li>
         <li>
-          <strong className="text-danger">SATIŞ TÜRÜ:</strong> {product.salesFormat ? 'Adet' : 'Takım'}
+          <strong className="text-danger">SATIŞ TÜRÜ:</strong> {product.salesFormat===true ? 'Adet' : 'Takım'}
         </li>
       </ul>
 
@@ -69,7 +70,9 @@ const ProductDetailInfo = ({ data }) => {
           <li>
             Resmi tatiller dışında gün içinde 16.00'a kadar yaptığınız tüm satın almalarda aldığınız her ürün aynı gün içinde anlaşmalı kargo şirketine teslim edilerek indirimli bir şekilde adresinize sevk edilir.
           </li>
-          <li>{product.salesFormat ? 'Adet' : 'Takım'} Fiyatıdır.</li>
+          <li>
+            {product.salesFormat===true  ? 'Adet' : 'Takım'} Fiyatıdır.
+          </li>
           <li>Bilgi Almak İçin Yazabilirsiniz.</li>
         </ul>
       </div> 

@@ -6,24 +6,20 @@ import SideMenu from "@/components/sideMenu";
 import ProductCard from "@/components/productCard";
 
 async function getSearchRequest(query) {
-  const res = await fetch(`http://3.75.212.3:3000/api/user/product/search/search?q=${query}`, 
-  {
-    cache: 'no-store'
-  },
-  {
+  const res = await fetch(`https://server-hesotomotiv.net/api/user/product/search/search?q=${query}`, {
+    cache: 'no-store',
     headers: {
       'Content-Type': 'application/json',
-    },
-
+    }
   });
-  const data = await res.json();
 
+  const data = await res.json();
   return data;
 }
 
 async function getSeriData() {
 
-  const res = await fetch('http://3.75.212.3:3000/api/user/series',{
+  const res = await fetch('https://server-hesotomotiv.net/api/user/series',{
     cache: 'no-store'
   })
 

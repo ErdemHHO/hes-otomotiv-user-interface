@@ -9,7 +9,7 @@ import NavigationBar from "@/components/navigationBar";
 async function getData(seri) {
 
   const slug = seri;
-  const res = await fetch(`http://3.75.212.3:3000/api/user/products/series/${slug}`,{
+  const res = await fetch(`https://server-hesotomotiv.net/api/user/products/series/${slug}`,{
     cache: 'no-store'
   })
 
@@ -20,7 +20,7 @@ async function getCarData(seri) {
 
   const slug = seri;
 
-  const res = await fetch(`http://3.75.212.3:3000/api/user/cars/series/${slug}`,{
+  const res = await fetch(`https://server-hesotomotiv.net/api/user/cars/series/${slug}`,{
     cache: 'no-store'
   })
 
@@ -34,7 +34,7 @@ async function getSeriData(seri) {
   
   const slug = seri;
 
-  const res = await fetch(`http://3.75.212.3:3000/api/user/series/${slug}`,{
+  const res = await fetch(`https://server-hesotomotiv.net/api/user/series/${slug}`,{
     cache: 'no-store'
   })
 

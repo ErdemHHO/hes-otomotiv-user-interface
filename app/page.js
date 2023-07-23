@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 
 async function getData() {
-  const res = await fetch('http://3.75.212.3:3000/api/user/products', {
+  const res = await fetch('https://server-hesotomotiv.net/api/user/products', {
     cache: 'no-store'
   });
 
@@ -24,7 +24,7 @@ async function getData() {
 
 async function getSeriData() {
 
-  const res = await fetch('http://3.75.212.3:3000/api/user/series',{
+  const res = await fetch('https://server-hesotomotiv.net/api/user/series',{
     cache: 'no-store'
   })
    

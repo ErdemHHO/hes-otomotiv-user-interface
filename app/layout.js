@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
             name="description"
             content="BMW / MINI OTOMOTIV YEDEK PARÇA VE AKSESUARLARI"
           />
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         </head>
       <body>
         <Header />

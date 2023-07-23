@@ -6,7 +6,7 @@ import ProductDetailInfo from '@/components/productDetailInfo';
 async function getProduct(urunDetay) {
 
   const productSlug = urunDetay;
-  const res = await fetch(`http://3.75.212.3:3000/api/user/product/${productSlug}`, {
+  const res = await fetch(`https://server-hesotomotiv.net/api/user/product/${productSlug}`, {
     cache: 'no-store'
   });
   return res.json();

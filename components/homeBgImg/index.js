@@ -29,9 +29,9 @@ function HomeBgImg() {
         <div className={`${styles.home} d-none d-xl-flex`}>
             <img src="/images/logos/bmwpng.png" alt="HES-OTOMOTIV" className={styles.bmwCar}></img>
         </div>
-        {/* <div className='d-xl-none d-lg-flex'>
-            <img src="/images/logos/bmwpng.png" alt="HES-OTOMOTIV" className={styles.bmwCar2} ></img>
-            <img src="/images/logos/HES-OTOMOTIV-LOGO1.png" alt="HES-OTOMOTIV" className={styles.bmwCar2} ></img>
+        {/* <div className='d-xl-none d-flex justify-content-center'>
+            <img src="/images/brands/bmw.png" alt="HES-OTOMOTIV" className={styles.logo2} height={60} width={60} />
+            <img src="/images/brands/mini.png" alt="HES-OTOMOTIV" className={styles.logo2} height={60} width={100} />
         </div> */}
     </div>
 

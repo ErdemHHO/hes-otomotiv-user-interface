@@ -32,11 +32,11 @@ function SideMenu({ data, seri, araba, kategori }) {
         })}
       </ul>
 
-      <div class="dropdown sideMenu2 d-lg-none ">
-        <Link class="btn btn-outline-dark" href="/urunler" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div className="dropdown sideMenu2 d-lg-none ">
+        <Link className="btn btn-outline-dark" href="/urunler" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           KATEGORİ SEÇİNİZ
         </Link>
-        <ul class="dropdown-menu">
+        <ul className="dropdown-menu">
         {categories.map((item) => {
           let url = `/urunler/${item.slug}`;
 

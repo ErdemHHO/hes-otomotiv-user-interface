@@ -8,17 +8,17 @@ function page() {
   return (
     <main className='icerik'>
       <div>
-        <div class="contact">
-          <h1 class="baslik-h1">İletişim</h1>
-                <div class="container">
-                    <div class="section-header text-center">
+        <div className="contact">
+          <h1 className="baslik-h1">İletişim</h1>
+                <div className="container">
+                    <div className="section-header text-center">
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="contact-info ">
-                                <div class="contact-item">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="contact-info ">
+                                <div className="contact-item">
                                     <MdLocationCity size={60} className='contact-icon'/>
-                                    <div class="contact-text">
+                                    <div className="contact-text">
                                         <h2>Adres</h2>
                                         <Link href="https://goo.gl/maps/zNPYF3LyxESozKND9" className='link' target="_blank" >
                                             <p>
@@ -27,18 +27,18 @@ function page() {
                                         </Link>
                                     </div>
                                 </div>
-                                <div class="contact-item">
+                                <div className="contact-item">
                                     <BsFillTelephoneFill size={60} className='contact-icon'/>
-                                    <div class="contact-text">
+                                    <div className="contact-text">
                                         <h2>Telefon</h2>
                                         <Link href="tel:+905322409058" className='link' target="_blank" >
                                           <p>+ 90 216 630 16 16</p> 
                                         </Link>
                                     </div>
                                 </div>
-                                <div class="contact-item">
+                                <div className="contact-item">
                                     <MdAttachEmail size={60} className='contact-icon'/>
-                                    <div class="contact-text">
+                                    <div className="contact-text">
                                         <h2>Email</h2>
                                         <Link  href="mailto:hesotomotiv34@gmail.com?subject=%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" >
                                           <p>hesotomotiv34@gmail.com</p>
@@ -47,29 +47,29 @@ function page() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="contact-info">
-                                <div class="contact-item">
+                        <div className="col-md-6">
+                            <div className="contact-info">
+                                <div className="contact-item">
                                     <FaInstagramSquare size={60} className='contact-icon'/>
-                                    <div class="contact-text">
+                                    <div className="contact-text">
                                         <h2>Instagram</h2>
                                         <Link href='https://www.instagram.com/hesotomotiv34/' target="_blank" >
                                             <p>hesotomotiv34</p>
                                         </Link>
                                     </div>
                                 </div>
-                                <div class="contact-item">
+                                <div className="contact-item">
                                     <FaFacebookSquare size={60} className='contact-icon'/>
-                                    <div class="contact-text">
+                                    <div className="contact-text">
                                         <h2>Facebook</h2>
                                         <Link href='https://www.facebook.com/hesotomotiv34/' target="_blank" >
                                             <p>hesotomotiv34</p>
                                         </Link>
                                     </div>
                                 </div>
-                                <div class="contact-item">
+                                <div className="contact-item">
                                     <FaWhatsapp size={60} className='contact-icon'/>
-                                    <div class="contact-text">
+                                    <div className="contact-text">
                                         <h2>Whatsapp</h2>
                                         <Link href="https://api.whatsapp.com/send/?phone=%2B905322409058&text=Merhaba%21++%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0" target="_blank" >
                                         <p>+90 532 240 90 58</p>

@@ -14,15 +14,30 @@ import WhatsappButton from "@/components/whatsappButton";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <head>
-          <title>HES OTOMOTİV | Bmw Mini Otomotiv Yedek Parcalari</title>
+        <Head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+          <title>HES OTOMOTİV | BMW ve MINI Otomotiv Yedek Parçaları</title>
           <meta content="width=device-width, initial-scale=1" name="viewport" />
+          <meta name="description" content="BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz." />
+          <meta name="keywords" content="BMW, MINI, Mini Cooper, BMW F10, BMW F20 , BMW F30, otomotiv yedek parça, orijinal parçalar, yedek parça mağazası, otomobil aksesuarları" />
+          <meta name="robots" content="index, follow" />
+          <meta name="language" content="Turkish" />
+          <meta name="author" content="HES OTOMOTİV" />
+          <meta name="revisit-after" content="7 days" />
+          <meta property="og:title" content="HES OTOMOTİV | BMW ve MINI Otomotiv Yedek Parçaları" />
+          <meta property="og:description" content="BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz." />
+          <meta property="og:image" content="https://hes-otomotiv.com/images/logos/HES-OTOMOTIV-LOGO.png" />
+          <meta property="og:url" content="https://www.hes-otomotiv.com" />
+          <meta property="og:type" content="website" />
+
           <meta
             name="description"
             content="BMW / MINI OTOMOTIV YEDEK PARÇA VE AKSESUARLARI"
           />
-          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-        </head>
+          <meta http-Equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        </Head>
       <body>
         <Header />
         <Navbar />

@@ -56,3 +56,18 @@ transform: scale(1.2);
 	background-size: cover;
 	background-position: center left;
 }
+
+
+
+.logo2{
+	animation: stideOn 3s ease forwards;
+	opacity: 0;
+}
+  @keyframes stideOn {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }

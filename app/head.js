@@ -7,7 +7,7 @@ export default function Head() {
         <title>HES OTOMOTİV | BMW ve MINI Otomotiv Yedek Parçaları</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="description" content="BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz." />
-        <meta name="keywords" content="BMW, MINI, Mini Cooper, BMW F10, BMW F20 , BMW F30, otomotiv yedek parça, orijinal parçalar, yedek parça mağazası, otomobil aksesuarları" />
+        <meta name="keywords" content="BMW, MINI, Mini Cooper, BMW F10, BMW F20, BMW F30, otomotiv yedek parça, orijinal parçalar, yedek parça mağazası, otomobil aksesuarları,automotive spare parts, original parts, spare parts store, car accessories" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="Turkish" />
         <meta name="author" content="HES OTOMOTİV" />

@@ -62,6 +62,7 @@ transform: scale(1.2);
 .logo2{
 	animation: stideOn 3s ease forwards;
 	opacity: 0;
+	
 }
   @keyframes stideOn {
 	0% {

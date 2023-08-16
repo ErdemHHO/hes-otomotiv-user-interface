@@ -3,6 +3,7 @@ import React from 'react';
 import ProductDetailImages from '@/components/productDetailImages';
 import ProductDetailInfo from '@/components/productDetailInfo';
 
+
 async function getProduct(urunDetay) {
 
   const productSlug = urunDetay;
@@ -13,12 +14,28 @@ async function getProduct(urunDetay) {
   
 }
 
+export async function generateMetadata({ params: {urunDetay} }) {
+
+  const data = await getProduct(urunDetay);
+
+  if (data && data.product) {
+    return {
+      description: data?.product?.title,
+    };
+  }
+  return {
+    description: "Ürün not found",
+  };
+}
+
+
 async function Page({ params: {urunDetay} }) {
   
   const data = await getProduct(urunDetay);
 
   return (
-    <main className='icerik'>
+<>
+      <main className='icerik'>
       <div className='container'>
         <div className='row'>
           <div className='col-xl-6' >
@@ -30,6 +47,8 @@ async function Page({ params: {urunDetay} }) {
         </div>
       </div>
     </main>
+</>
+
   );
 }
 

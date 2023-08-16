@@ -1,5 +1,10 @@
 import React from 'react'
 
+export const metadata = {
+  description: "BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz",
+};
+
+
 function page() {
   return (
     <main className='icerik container text-center' >

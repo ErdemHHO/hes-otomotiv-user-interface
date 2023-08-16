@@ -5,6 +5,11 @@ import {useSearchParams } from "next/navigation";
 import SideMenu from "@/components/sideMenu";
 import ProductCard from "@/components/productCard";
 
+export const metadata = {
+  description: "BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz",
+};
+
+
 async function getSearchRequest(query) {
   const res = await fetch(`https://server-hesotomotiv.net/api/user/product/search/search?q=${query}`, {
     cache: 'no-store',

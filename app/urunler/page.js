@@ -4,6 +4,8 @@ import SideMenu from "@/components/sideMenu";
 import ProductCard from "@/components/productCard";
 import NavigationBar from "@/components/navigationBar";
 
+
+
 async function getData() {
 
   const res = await fetch('https://server-hesotomotiv.net/api/user/products',{

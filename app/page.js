@@ -7,6 +7,9 @@ import ProductCard from "@/components/productCard";
 
 import Link from 'next/link'
 
+export const metadata = {
+  description: "BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz",
+};
 
 
 async function getData() {
@@ -44,7 +47,7 @@ export default async function Home() {
   return (
     <main>
 
-      <div className="mt-5" >
+      <div>
         <div className="container" >
           <div className="row">
             <div className='col-xl-3 text-center d-none d-md-flex justify-content-center'>

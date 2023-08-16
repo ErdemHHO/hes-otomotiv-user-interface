@@ -1,56 +1,18 @@
 'use client'
 
-
-import { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'next/image';
-import { FaWhatsapp } from 'react-icons/fa';
-
 import styles from "./styles.module.css";
 import Link from 'next/link';
 import NavbarSearchInput from '../navbarSearchInput';
 
 function HNavbar() {
-  const myComponentStyles = {
-    display: "block",
-    width: "100%",
-    position: "fixed",
-    top: "0",
-    left: "0",
-    zIndex: "10",
-    backgroundColor: "#fff",
-    boxShadow: "0 4px 4px -2px rgba(0,0,0,0.2), 0 2px 8px 0 rgba(0,0,0,0.14), 0 6px 10px 0 rgba(0,0,0,0.12)",
-    marginTop: "65px",
-    transition: "margin-top 0.4s ease-in-out"
-  };
-  const [myStyles, setMyStyles] = useState(myComponentStyles);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.matchMedia('(min-width: 1200px)').matches) {
-      function handleScroll() {
-        const newStyles = {
-          ...myComponentStyles,
-          marginTop: window.scrollY > 30 ? '0px' : '65px',
-        };
-        setMyStyles(newStyles);
-      }
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    } else {
-      // if the screen size is smaller than xl, set marginTop to 0
-      setMyStyles({ ...myComponentStyles, marginTop: '0' });
-    }
-  }, []);
 
   return (
-    <div>
-      <Navbar style={myStyles} expand="xl" className='px-5 pt-3 text-center justify-content-center' id='navbar'>
+    <div className={styles.navbar} >
+      <Navbar expand="xl" className='px-5 pt-3 text-center justify-content-center' id='navbar'>
         <Container fluid className='nav'>
           <Link href="/" >
             <Navbar.Brand>

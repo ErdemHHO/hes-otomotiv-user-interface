@@ -8,6 +8,17 @@
 		display: none;
 	}
 }
+
+.navbar {
+	position: sticky !important;
+	display: block;
+	top: 0 ;
+	background-color: #fff ;
+	z-index: 1000 ;
+	box-shadow: 0 4px 4px -2px rgba(0,0,0,0.2) ;
+  }
+
+
 .baslik1{
 	font-size: x-large;
 	color: #02548C;

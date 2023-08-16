@@ -6,6 +6,11 @@ import ProductCard from "@/components/productCard";
 import NavigationBar from "@/components/navigationBar";
 
 
+export const metadata = {
+  description: "BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz",
+};
+
+
 async function getData(seri) {
 
   const slug = seri;

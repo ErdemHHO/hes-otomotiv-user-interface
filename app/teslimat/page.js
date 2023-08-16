@@ -1,12 +1,6 @@
 
-'use client'
-
 import React from 'react'
 
-import { Container,Row,Col } from "react-bootstrap";
-
-import SeriesMenu from "@/components/sideMenu";
-import ProductCard from "@/components/productCard";
 
 export const metadata = {
   description: "BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz",

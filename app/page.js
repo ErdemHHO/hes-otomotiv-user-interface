@@ -7,10 +7,6 @@ import ProductCard from "@/components/productCard";
 
 import Link from 'next/link'
 
-export const metadata = {
-  description: "BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz",
-};
-
 
 async function getData() {
   const res = await fetch('https://server-hesotomotiv.net/api/user/products', {

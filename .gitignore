@@ -17,7 +17,7 @@
 
 /.next/cache
 /.next/server
-/.next/static
+
 
 # misc
 .DS_Store

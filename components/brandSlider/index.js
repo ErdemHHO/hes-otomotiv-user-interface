@@ -1,7 +1,6 @@
 'use client'
 
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
 import Slider from "react-slick";
 
 import stylesSlick from "./slick-theme.css";
@@ -46,7 +45,7 @@ export default class AutoPlay extends Component {
         <div className='mt-5'>
 
           <h1 className='text-center mb-3'><strong>MARKALARIMIZ</strong></h1>
-          <Container fluid className=" p-5 d-block text-center justify-content-center">
+          <div className="container p-5 d-block text-center justify-content-center">
           <Slider {...settings} className={stylesSlick} >
             <div className={`${styles.brandSlider} m-1`} >
             <img src="/images/brands/bmw.png" alt="Logo" className={styles.sliderImage}/>
@@ -109,7 +108,7 @@ export default class AutoPlay extends Component {
             <img src="/images/brands/hes-otomotiv-swf.png" alt="Logo" className={styles.sliderImage} />
             </div>
           </Slider>
-          </Container>
+          </div>
         </div>
       );
     }

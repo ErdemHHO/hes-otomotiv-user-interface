@@ -3,7 +3,7 @@ export default function Head() {
       <>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <title>HES OTOMOTİV | BMW ve MINI Otomotiv Yedek Parçaları</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="description" content="BMW ve MINI otomobilleriniz için orijinal ve yüksek kaliteli yedek parçalar ve aksesuarlar. Geniş ürün yelpazemizle sizlere hizmet veriyoruz." />
@@ -22,7 +22,7 @@ export default function Head() {
           name="description"
           content="BMW / MINI OTOMOTIV YEDEK PARÇA VE AKSESUARLARI"
         />
-        <meta http-Equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />

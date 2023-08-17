@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
 				<meta property="og:url" content="https://www.hes-otomotiv.com" />
 				<meta property="og:type" content="website" />
 				<meta
-					http-Equiv="Content-Security-Policy"
+					httpEquiv="Content-Security-Policy"
 					content="upgrade-insecure-requests"
 				/>
         <link rel="icon" href="/images/logos/hes-otomotiv-logo-1-2.png" />

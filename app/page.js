@@ -7,31 +7,53 @@ import ProductCard from "@/components/productCard";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch("https://server.hes-otomotiv.com/api/user/products", {
-    cache: "no-store",
-  });
+  try {
+    const res = await fetch("http://localhost:4000/api/user/products", {
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    if (!res.ok) {
+      throw new Error("Failed to fetch product data");
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Fetch error (products):", error);
+    return null;
   }
-
-  return res.json();
 }
 
 async function getSeriData() {
-  const res = await fetch("https://server.hes-otomotiv.com/api/user/series", {
-    cache: "no-store",
-  });
+  try {
+    const res = await fetch("http://localhost:4000/api/user/series", {
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    if (!res.ok) {
+      throw new Error("Failed to fetch series data");
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Fetch error (series):", error);
+    return null;
   }
-  return res.json();
 }
 
 export default async function Home() {
   const data = await getData();
   const seriData = await getSeriData();
+
+  if (!data || !seriData) {
+    return (
+      <main>
+        <div>
+          <h1>Error loading data</h1>
+          <p>Please try again later.</p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>
@@ -41,7 +63,7 @@ export default async function Home() {
             <div className="col-xl-3 text-center d-none d-md-flex justify-content-center">
               <SideMenu data={seriData} />
             </div>
-            <div className="col-xl-9 ">
+            <div className="col-xl-9">
               <HomeBgImg />
             </div>
           </div>

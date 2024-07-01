@@ -4,13 +4,23 @@ import ProductDetailInfo from "@/components/productDetailInfo";
 
 async function getProduct(urunDetay) {
   const productSlug = urunDetay;
-  const res = await fetch(
-    `https://server.hes-otomotiv.com/api/user/product/${productSlug}`,
-    {
-      cache: "no-store",
+  try {
+    const res = await fetch(
+      `http://localhost:4000/api/user/product/${productSlug}`,
+      {
+        cache: "no-store",
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch product data");
     }
-  );
-  return res.json();
+
+    return res.json();
+  } catch (error) {
+    console.error("Fetch error (product):", error);
+    return null;
+  }
 }
 
 export async function generateMetadata({ params: { urunDetay } }) {
@@ -28,6 +38,17 @@ export async function generateMetadata({ params: { urunDetay } }) {
 
 async function Page({ params: { urunDetay } }) {
   const data = await getProduct(urunDetay);
+
+  if (!data) {
+    return (
+      <main className="icerik">
+        <div className="container">
+          <h1>Error loading product data</h1>
+          <p>Please try again later.</p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <>

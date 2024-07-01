@@ -4,29 +4,51 @@ import ProductCard from "@/components/productCard";
 import NavigationBar from "@/components/navigationBar";
 
 async function getData() {
-  const res = await fetch("https://server.hes-otomotiv.com/api/user/products", {
-    cache: "no-store",
-  });
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+  try {
+    const res = await fetch("http://localhost:4000/api/user/products", {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      throw new Error("Failed to fetch product data");
+    }
+    return res.json();
+  } catch (error) {
+    console.error("Fetch error (products):", error);
+    return null;
   }
-  return res.json();
 }
 
 async function getSeriData() {
-  const res = await fetch("https://server.hes-otomotiv.com/api/user/series", {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+  try {
+    const res = await fetch("http://localhost:4000/api/user/series", {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      throw new Error("Failed to fetch series data");
+    }
+    return res.json();
+  } catch (error) {
+    console.error("Fetch error (series):", error);
+    return null;
   }
-  return res.json();
 }
 
 async function page() {
   const data = await getData();
   const seriData = await getSeriData();
+
+  if (!data || !seriData) {
+    return (
+      <div className="icerik">
+        <div className="mt-5">
+          <div className="container-fluid">
+            <h1>Error loading data</h1>
+            <p>Please try again later.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="icerik">

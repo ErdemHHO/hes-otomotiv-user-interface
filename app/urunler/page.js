@@ -5,7 +5,7 @@ import NavigationBar from "@/components/navigationBar";
 
 async function getData() {
   try {
-    const res = await fetch("http://localhost:4000/api/user/products", {
+    const res = await fetch("http://193.57.41.102:4000/api/user/products", {
       cache: "no-store",
     });
     if (!res.ok) {
@@ -20,7 +20,7 @@ async function getData() {
 
 async function getSeriData() {
   try {
-    const res = await fetch("http://localhost:4000/api/user/series", {
+    const res = await fetch("http://193.57.41.102:4000/api/user/series", {
       cache: "no-store",
     });
     if (!res.ok) {

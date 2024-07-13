@@ -7,7 +7,7 @@ async function getData(seri) {
   const slug = seri;
   try {
     const res = await fetch(
-      `http://localhost:4000/api/user/products/series/${slug}`,
+      `http://193.57.41.102:4000/api/user/products/series/${slug}`,
       {
         cache: "no-store",
       }
@@ -28,7 +28,7 @@ async function getCarData(seri) {
   const slug = seri;
   try {
     const res = await fetch(
-      `http://localhost:4000/api/user/cars/series/${slug}`,
+      `http://193.57.41.102:4000/api/user/cars/series/${slug}`,
       {
         cache: "no-store",
       }
@@ -48,9 +48,12 @@ async function getCarData(seri) {
 async function getSeriData(seri) {
   const slug = seri;
   try {
-    const res = await fetch(`http://localhost:4000/api/user/series/${slug}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `http://193.57.41.102:4000/api/user/series/${slug}`,
+      {
+        cache: "no-store",
+      }
+    );
 
     if (!res.ok) {
       throw new Error("Failed to fetch series data");

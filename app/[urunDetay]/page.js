@@ -6,7 +6,7 @@ async function getProduct(urunDetay) {
   const productSlug = urunDetay;
   try {
     const res = await fetch(
-      `http://localhost:4000/api/user/product/${productSlug}`,
+      `http://193.57.41.102:4000/api/user/product/${productSlug}`,
       {
         cache: "no-store",
       }

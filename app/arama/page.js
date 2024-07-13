@@ -8,7 +8,7 @@ import ProductCard from "@/components/productCard";
 async function getSearchRequest(query) {
   try {
     const res = await fetch(
-      `http://localhost:4000/api/user/product/search/search?q=${query}`,
+      `http://193.57.41.102:4000/api/user/product/search/search?q=${query}`,
       {
         cache: "no-store",
         headers: {
@@ -30,7 +30,7 @@ async function getSearchRequest(query) {
 
 async function getSeriData() {
   try {
-    const res = await fetch("http://localhost:4000/api/user/series", {
+    const res = await fetch("http://193.57.41.102:4000/api/user/series", {
       cache: "no-store",
     });
 

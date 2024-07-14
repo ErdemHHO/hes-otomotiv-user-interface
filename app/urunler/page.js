@@ -8,7 +8,7 @@ async function getData() {
     const res = await fetch(
       "https://server.hes-otomotiv.com/api/user/products",
       {
-        next: { revalidate: 10 },
+        cache: "no-store",
       }
     );
     if (!res.ok) {

@@ -7,7 +7,7 @@ async function getData(araba) {
   const slug = araba;
   try {
     const res = await fetch(
-      `https://server.erdemhho.com/api/user/products/car/${slug}`,
+      `https://hes-otomotiv.com/api/user/products/car/${slug}`,
       {
         cache: "no-store",
       }
@@ -26,7 +26,7 @@ async function getData(araba) {
 
 async function getCategoryData() {
   try {
-    const res = await fetch("https://server.erdemhho.com/api/user/categories", {
+    const res = await fetch("https://hes-otomotiv.com/api/user/categories", {
       cache: "no-store",
     });
 
@@ -44,12 +44,9 @@ async function getCategoryData() {
 async function getCarData(araba) {
   const slug = araba;
   try {
-    const res = await fetch(
-      `https://server.erdemhho.com/api/user/cars/${slug}`,
-      {
-        cache: "no-store",
-      }
-    );
+    const res = await fetch(`https://hes-otomotiv.com/api/user/cars/${slug}`, {
+      cache: "no-store",
+    });
 
     if (!res.ok) {
       throw new Error("Failed to fetch car data");
@@ -66,7 +63,7 @@ async function getSeriData(seri) {
   const slug = seri;
   try {
     const res = await fetch(
-      `https://server.erdemhho.com/api/user/series/${slug}`,
+      `https://hes-otomotiv.com/api/user/series/${slug}`,
       {
         cache: "no-store",
       }

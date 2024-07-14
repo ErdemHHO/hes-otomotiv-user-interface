@@ -8,7 +8,7 @@ import Link from "next/link";
 
 async function getData() {
   try {
-    const res = await fetch("https://server.erdemhho.com/api/user/products", {
+    const res = await fetch("https://hes-otomotiv.com/api/user/products", {
       cache: "no-store",
     });
 
@@ -25,7 +25,7 @@ async function getData() {
 
 async function getSeriData() {
   try {
-    const res = await fetch("https://server.erdemhho.com/api/user/series", {
+    const res = await fetch("https://hes-otomotiv.com/api/user/series", {
       cache: "no-store",
     });
 

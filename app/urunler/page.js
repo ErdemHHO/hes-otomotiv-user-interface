@@ -5,12 +5,9 @@ import NavigationBar from "@/components/navigationBar";
 
 async function getData() {
   try {
-    const res = await fetch(
-      "https://server-hesotomotiv.com/api/user/products",
-      {
-        cache: "no-store",
-      }
-    );
+    const res = await fetch("https://server.erdemhho.com/api/user/products", {
+      cache: "no-store",
+    });
     if (!res.ok) {
       throw new Error("Failed to fetch product data");
     }
@@ -23,7 +20,7 @@ async function getData() {
 
 async function getSeriData() {
   try {
-    const res = await fetch("https://server-hesotomotiv.com/api/user/series", {
+    const res = await fetch("https://server.erdemhho.com/api/user/series", {
       cache: "no-store",
     });
     if (!res.ok) {

@@ -8,7 +8,7 @@ import ProductCard from "@/components/productCard";
 async function getSearchRequest(query) {
   try {
     const res = await fetch(
-      `https://server-hesotomotiv.com/api/user/product/search/search?q=${query}`,
+      `https://server.erdemhho.com/api/user/product/search/search?q=${query}`,
       {
         cache: "no-store",
         headers: {
@@ -30,7 +30,7 @@ async function getSearchRequest(query) {
 
 async function getSeriData() {
   try {
-    const res = await fetch("https://server-hesotomotiv.com/api/user/series", {
+    const res = await fetch("https://server.erdemhho.com/api/user/series", {
       cache: "no-store",
     });
 

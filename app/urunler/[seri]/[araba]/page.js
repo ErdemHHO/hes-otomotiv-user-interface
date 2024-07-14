@@ -7,7 +7,7 @@ async function getData(araba) {
   const slug = araba;
   try {
     const res = await fetch(
-      `http://server-hesotomotiv.com/api/user/products/car/${slug}`,
+      `https://server-hesotomotiv.com/api/user/products/car/${slug}`,
       {
         cache: "no-store",
       }
@@ -27,7 +27,7 @@ async function getData(araba) {
 async function getCategoryData() {
   try {
     const res = await fetch(
-      "http://server-hesotomotiv.com/api/user/categories",
+      "https://server-hesotomotiv.com/api/user/categories",
       {
         cache: "no-store",
       }
@@ -48,7 +48,7 @@ async function getCarData(araba) {
   const slug = araba;
   try {
     const res = await fetch(
-      `http://server-hesotomotiv.com/api/user/cars/${slug}`,
+      `https://server-hesotomotiv.com/api/user/cars/${slug}`,
       {
         cache: "no-store",
       }
@@ -69,7 +69,7 @@ async function getSeriData(seri) {
   const slug = seri;
   try {
     const res = await fetch(
-      `http://server-hesotomotiv.com/api/user/series/${slug}`,
+      `https://server-hesotomotiv.com/api/user/series/${slug}`,
       {
         cache: "no-store",
       }

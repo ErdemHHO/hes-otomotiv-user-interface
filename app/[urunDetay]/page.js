@@ -6,7 +6,7 @@ async function getProduct(urunDetay) {
   const productSlug = urunDetay;
   try {
     const res = await fetch(
-      `http://server-hesotomotiv.com/api/user/product/${productSlug}`,
+      `https://server-hesotomotiv.com/api/user/product/${productSlug}`,
       {
         cache: "no-store",
       }

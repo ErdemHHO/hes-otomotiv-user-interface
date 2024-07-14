@@ -9,7 +9,7 @@
 
 html,body{
   font-family: 'Cabin', sans-serif;
-  color: #000;
+  color: #000 !important;
 }
 
 .icerik{
@@ -23,6 +23,7 @@ ul {
 
 ul li {
   text-decoration: none;
+  color: #000;
 }
 
 a{
@@ -30,6 +31,14 @@ a{
 }
 .link{
   color:#fff !important;
+}
+
+.p{
+  color:#000;
+}
+
+.h1{
+  color:#000;
 }
 
 .navigation-link:hover{

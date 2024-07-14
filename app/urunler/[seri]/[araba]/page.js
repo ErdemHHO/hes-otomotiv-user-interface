@@ -29,7 +29,7 @@ async function getCategoryData() {
     const res = await fetch(
       "https://server.hes-otomotiv.com/api/user/categories",
       {
-        cache: "no-store",
+        next: { revalidate: 10 },
       }
     );
 
@@ -50,7 +50,7 @@ async function getCarData(araba) {
     const res = await fetch(
       `https://server.hes-otomotiv.com/api/user/cars/${slug}`,
       {
-        cache: "no-store",
+        next: { revalidate: 10 },
       }
     );
 
@@ -71,7 +71,7 @@ async function getSeriData(seri) {
     const res = await fetch(
       `https://server.hes-otomotiv.com/api/user/series/${slug}`,
       {
-        cache: "no-store",
+        next: { revalidate: 10 },
       }
     );
 
@@ -91,19 +91,6 @@ async function page({ params: { araba, seri } }) {
   const categoryData = await getCategoryData();
   const carData = await getCarData(araba);
   const seriData = await getSeriData(seri);
-
-  if (!data || !categoryData || !carData || !seriData) {
-    return (
-      <div className="icerik">
-        <div className="mt-5">
-          <div className="container-fluid">
-            <h1>Error loading data</h1>
-            <p>Please try again later.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="icerik">

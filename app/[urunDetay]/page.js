@@ -39,17 +39,6 @@ export async function generateMetadata({ params: { urunDetay } }) {
 async function Page({ params: { urunDetay } }) {
   const data = await getProduct(urunDetay);
 
-  if (!data) {
-    return (
-      <main className="icerik">
-        <div className="container">
-          <h1>Error loading product data</h1>
-          <p>Please try again later.</p>
-        </div>
-      </main>
-    );
-  }
-
   return (
     <>
       <main className="icerik">

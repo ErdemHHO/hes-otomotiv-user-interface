@@ -8,7 +8,7 @@ async function getData() {
     const res = await fetch(
       "https://server.hes-otomotiv.com/api/user/products",
       {
-        cache: "no-store",
+        next: { revalidate: 10 },
       }
     );
     if (!res.ok) {
@@ -24,7 +24,7 @@ async function getData() {
 async function getSeriData() {
   try {
     const res = await fetch("https://server.hes-otomotiv.com/api/user/series", {
-      cache: "no-store",
+      next: { revalidate: 10 },
     });
     if (!res.ok) {
       throw new Error("Failed to fetch series data");
@@ -39,19 +39,6 @@ async function getSeriData() {
 async function page() {
   const data = await getData();
   const seriData = await getSeriData();
-
-  if (!data || !seriData) {
-    return (
-      <div className="icerik">
-        <div className="mt-5">
-          <div className="container-fluid">
-            <h1>Error loading data</h1>
-            <p>Please try again later.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="icerik">

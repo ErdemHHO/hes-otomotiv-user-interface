@@ -11,7 +11,7 @@ async function getData() {
     const res = await fetch(
       "https://server.hes-otomotiv.com/api/user/products",
       {
-        cache: "no-store",
+        next: { revalidate: 10 },
       }
     );
 
@@ -29,7 +29,7 @@ async function getData() {
 async function getSeriData() {
   try {
     const res = await fetch("https://server.hes-otomotiv.com/api/user/series", {
-      cache: "no-store",
+      next: { revalidate: 10 },
     });
 
     if (!res.ok) {
@@ -46,17 +46,6 @@ async function getSeriData() {
 export default async function Home() {
   const data = await getData();
   const seriData = await getSeriData();
-
-  if (!data || !seriData) {
-    return (
-      <main>
-        <div>
-          <h1>Error loading data</h1>
-          <p>Please try again later.</p>
-        </div>
-      </main>
-    );
-  }
 
   return (
     <main>

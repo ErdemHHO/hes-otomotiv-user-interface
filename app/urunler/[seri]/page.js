@@ -30,7 +30,7 @@ async function getCarData(seri) {
     const res = await fetch(
       `https://server.hes-otomotiv.com/api/user/cars/series/${slug}`,
       {
-        cache: "no-store",
+        next: { revalidate: 10 },
       }
     );
 
@@ -51,7 +51,7 @@ async function getSeriData(seri) {
     const res = await fetch(
       `https://server.hes-otomotiv.com/api/user/series/${slug}`,
       {
-        cache: "no-store",
+        next: { revalidate: 10 },
       }
     );
 
@@ -70,19 +70,6 @@ async function page({ params: { seri } }) {
   const data = await getData(seri);
   const carData = await getCarData(seri);
   const seriData = await getSeriData(seri);
-
-  if (!data || !carData || !seriData) {
-    return (
-      <div className="icerik">
-        <div className="mt-5">
-          <div className="container-fluid">
-            <h1>Error loading data</h1>
-            <p>Please try again later.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="icerik">

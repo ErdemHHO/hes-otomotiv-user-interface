@@ -8,7 +8,7 @@ async function getData(araba, kategori) {
   const categorySlug = kategori;
   try {
     const res = await fetch(
-      `https://hes-otomotiv.com/api/user/products/car/${carSlug}/category/${categorySlug}`,
+      `https://server.hes-otomotiv.com/api/user/products/car/${carSlug}/category/${categorySlug}`,
       {
         cache: "no-store",
       }
@@ -27,9 +27,12 @@ async function getData(araba, kategori) {
 
 async function getCategoryData() {
   try {
-    const res = await fetch("https://hes-otomotiv.com/api/user/categories", {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      "https://server.hes-otomotiv.com/api/user/categories",
+      {
+        cache: "no-store",
+      }
+    );
 
     if (!res.ok) {
       throw new Error("Failed to fetch category data");
@@ -45,9 +48,12 @@ async function getCategoryData() {
 async function getCarData(araba) {
   const slug = araba;
   try {
-    const res = await fetch(`https://hes-otomotiv.com/api/user/cars/${slug}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `https://server.hes-otomotiv.com/api/user/cars/${slug}`,
+      {
+        cache: "no-store",
+      }
+    );
 
     if (!res.ok) {
       throw new Error("Failed to fetch car data");
@@ -64,7 +70,7 @@ async function getSeriData(seri) {
   const slug = seri;
   try {
     const res = await fetch(
-      `https://hes-otomotiv.com/api/user/series/${slug}`,
+      `https://server.hes-otomotiv.com/api/user/series/${slug}`,
       {
         cache: "no-store",
       }
@@ -85,7 +91,7 @@ async function getKategoriData(kategori) {
   const slug = kategori;
   try {
     const res = await fetch(
-      `https://hes-otomotiv.com/api/user/categories/${slug}`,
+      `https://server.hes-otomotiv.com/api/user/categories/${slug}`,
       {
         cache: "no-store",
       }

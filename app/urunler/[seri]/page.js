@@ -7,7 +7,7 @@ async function getData(seri) {
   const slug = seri;
   try {
     const res = await fetch(
-      `https://hes-otomotiv.com/api/user/products/series/${slug}`,
+      `https://server.hes-otomotiv.com/api/user/products/series/${slug}`,
       {
         cache: "no-store",
       }
@@ -28,7 +28,7 @@ async function getCarData(seri) {
   const slug = seri;
   try {
     const res = await fetch(
-      `https://hes-otomotiv.com/api/user/cars/series/${slug}`,
+      `https://server.hes-otomotiv.com/api/user/cars/series/${slug}`,
       {
         cache: "no-store",
       }
@@ -49,7 +49,7 @@ async function getSeriData(seri) {
   const slug = seri;
   try {
     const res = await fetch(
-      `https://hes-otomotiv.com/api/user/series/${slug}`,
+      `https://server.hes-otomotiv.com/api/user/series/${slug}`,
       {
         cache: "no-store",
       }
